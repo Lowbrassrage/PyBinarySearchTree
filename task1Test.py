@@ -1,10 +1,11 @@
 import unittest
 import sys
 from io import StringIO
-from nodeReference import *
-from nodeDict import *
+from Task1 import *
+
 
 class unitTests(unittest.TestCase):
+
     """docstring for ClassName"""
 
     def testNodeRef1(self):

@@ -27,35 +27,33 @@ class Node(object):
         #   if node has right:
         #       rightNode.printMe()
         if self.leftNode is None and self.rightNode is None:
-            print(self.value , ' ', end="")
+            print(self.value, ' ', end="")
         else:
             if self.leftNode is not None:
                 self.leftNode.printMe()
-            print(self.value , ' ', end="")
+            print(self.value, ' ', end="")
             if self.rightNode is not None:
                 self.rightNode.printMe()
 
-    def search(self,K):
-        print(self.value)
+    def search(self, K):
+        # print(str(self.value) + ' ', end="")
         if self.value == K:
-            print('node = to',K)
-        elif K < self.value :
-            print('left',K)
-            if self.leftNode == None:
-                #self.leftNode.search(K)
-                print('NONE LEFT')
+            print('node = to' + ' ', K)
+        elif K < self.value:
+            print('left' + ' ', K, ' ', end="")
+            if self.leftNode is None:
+                # self.leftNode.search(K)
+                print('NONE LEFT'+ ' ', end="")
             else:
                 self.leftNode.search(K)
-        elif K > self.value :
-            print('right',K)
-            if self.rightNode == None:
-                #self.rightNode.search(K)
-                print('NONE RIGHT')
+        elif K > self.value:
+            print('right' + ' ', K, ' ', end="")
+            if self.rightNode is None:
+                # self.rightNode.search(K)
+                print('NONE RIGHT' + ' ', end="")
             else:
                 self.rightNode.search(K)
-                #print('NONE RIGHT')
-
-
+                # print('NONE RIGHT')
 
 
 def main():
@@ -67,8 +65,6 @@ def main():
     node3 = Node(3)
     node19 = Node(19)
     node25 = Node(25)
- 
-
 
     root.setLeft(node2)
     root.setRight(node21)
@@ -77,10 +73,9 @@ def main():
     node21.setLeft(node19)
     node21.setRight(node25)
 
-
     root.printMe()
     print('')
-    root.search(20)
+    root.search(3)
 
 
 if __name__ == '__main__':
